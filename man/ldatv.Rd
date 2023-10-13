@@ -23,15 +23,15 @@ ldatv(data_res, data_cov, time, N, bd, method, scb)
 }
 \value{
 a list with the following elements:
-\item{$est.b$}{The estimation for the parameter of synchronous covariates.}
-\item{$est.g$}{The estimation for the parameter of asynchronous covariates.}
-\item{$se.b$}{The estimation of standard error for the parameter of synchronous covariates.}
-\item{$se.g$}{The estimation of standard error for the parameter of asynchronous covariates.}
-\item{$c_alpha_x$}{The empirical percentile used to construct the simultaneous confidence band for the parameter of synchronous covariates.}
-\item{$c_alpha_z$}{The empirical percentile used to construct the simultaneous confidence band for the parameter of asynchronous covariates.}
+\item{est.b}{The estimation for the parameter of synchronous covariates.}
+\item{est.g}{The estimation for the parameter of asynchronous covariates.}
+\item{se.b}{The estimation of standard error for the parameter of synchronous covariates.}
+\item{se.g}{The estimation of standard error for the parameter of asynchronous covariates.}
+\item{c_alpha_x}{The empirical percentile used to construct the simultaneous confidence band for the parameter of synchronous covariates.}
+\item{c_alpha_z}{The empirical percentile used to construct the simultaneous confidence band for the parameter of asynchronous covariates.}
 }
 \description{
-This package provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates.
+This function provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates with time-varying coefficients.
 }
 \examples{
 

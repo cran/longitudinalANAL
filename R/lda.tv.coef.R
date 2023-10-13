@@ -1,6 +1,6 @@
 #' @title Longitudinal data analysis
 #'
-#' @description This package provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates.
+#' @description This function provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates with time-varying coefficients.
 #'
 #' @param  data_res  An object of class tibble. The structure of the tibble must be: tibble(id_y=ID, ty=measurement time for response, y=observation for response, x=matrix(observation for synchronous covariates), x_add=matrix(observation for uninterested synchronous covariates)).
 #'
@@ -17,12 +17,12 @@
 #' @param  scb An object of class vector. If need to construct the simultaneous confidence band, the structure of the vector must be: c(alpha=desirable confidence level, B=repeat times). Otherwise, scb=0.
 #'
 #' @return a list with the following elements:
-#' \item{$est.b$}{The estimation for the parameter of synchronous covariates.}
-#' \item{$est.g$}{The estimation for the parameter of asynchronous covariates.}
-#' \item{$se.b$}{The estimation of standard error for the parameter of synchronous covariates.}
-#' \item{$se.g$}{The estimation of standard error for the parameter of asynchronous covariates.}
-#' \item{$c_alpha_x$}{The empirical percentile used to construct the simultaneous confidence band for the parameter of synchronous covariates.}
-#' \item{$c_alpha_z$}{The empirical percentile used to construct the simultaneous confidence band for the parameter of asynchronous covariates.}
+#' \item{est.b}{The estimation for the parameter of synchronous covariates.}
+#' \item{est.g}{The estimation for the parameter of asynchronous covariates.}
+#' \item{se.b}{The estimation of standard error for the parameter of synchronous covariates.}
+#' \item{se.g}{The estimation of standard error for the parameter of asynchronous covariates.}
+#' \item{c_alpha_x}{The empirical percentile used to construct the simultaneous confidence band for the parameter of synchronous covariates.}
+#' \item{c_alpha_z}{The empirical percentile used to construct the simultaneous confidence band for the parameter of asynchronous covariates.}
 #'
 #' @import  dplyr  tibble
 #' @importFrom MASS mvrnorm

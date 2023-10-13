@@ -1,14 +1,14 @@
 #' @title Longitudinal data analysis
 #'
-#' @description This package provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates.
+#' @description This function provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates.
 #'
-#' @param  data_res  An object of class tibble. The structure of the tibble must be: $tibble(id_y=ID, ty=measurement time for response, y=observation for response, x=matrix(observation for synchronous covariates), x_add=matrix(observation for uninterested synchronous covariates))$.
+#' @param  data_res  An object of class tibble. The structure of the tibble must be: tibble(id_y=ID, ty=measurement time for response, y=observation for response, x=matrix(observation for synchronous covariates), x_add=matrix(observation for uninterested synchronous covariates)).
 #'
-#' @param  data_cov  An object of class tibble. The structure of the tibble must be: $tibble(id_z=ID, tz=measurement time for response, z=matrix(observation for asynchronous covariates))$.
+#' @param  data_cov  An object of class tibble. The structure of the tibble must be: tibble(id_z=ID, tz=measurement time for response, z=matrix(observation for asynchronous covariates)).
 #'
 #' @param  N An object of class integer. The sample size.
 #'
-#' @param  bd An object of class vector. If use auto bandwidth selection, the structure of the vector must be: $bd=c(the maximum bandwidth, the minimum bandwidth, the fold of cross-validation, the number of bandwidth divided).$ If use fixed bandwidth, $bd=c(the chosen bandwidth).$
+#' @param  bd An object of class vector. If use auto bandwidth selection, the structure of the vector must be: d=c(the maximum bandwidth, the minimum bandwidth, the fold of cross-validation, the number of bandwidth divided). If use fixed bandwidth, bd=c(the chosen bandwidth).
 #'
 #' @param  omit An object of class integer indicating the method used to do estimation for synchronous covariates. If use plm method, omit=1; if use centering method, omit=2; if use additional covariates information, omit=3.
 #'

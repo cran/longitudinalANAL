@@ -7,13 +7,13 @@
 lda(data_res, data_cov, N, bd, omit, method)
 }
 \arguments{
-\item{data_res}{An object of class tibble. The structure of the tibble must be: $tibble(id_y=ID, ty=measurement time for response, y=observation for response, x=matrix(observation for synchronous covariates), x_add=matrix(observation for uninterested synchronous covariates))$.}
+\item{data_res}{An object of class tibble. The structure of the tibble must be: tibble(id_y=ID, ty=measurement time for response, y=observation for response, x=matrix(observation for synchronous covariates), x_add=matrix(observation for uninterested synchronous covariates)).}
 
-\item{data_cov}{An object of class tibble. The structure of the tibble must be: $tibble(id_z=ID, tz=measurement time for response, z=matrix(observation for asynchronous covariates))$.}
+\item{data_cov}{An object of class tibble. The structure of the tibble must be: tibble(id_z=ID, tz=measurement time for response, z=matrix(observation for asynchronous covariates)).}
 
 \item{N}{An object of class integer. The sample size.}
 
-\item{bd}{An object of class vector. If use auto bandwidth selection, the structure of the vector must be: $bd=c(the maximum bandwidth, the minimum bandwidth, the fold of cross-validation, the number of bandwidth divided).$ If use fixed bandwidth, $bd=c(the chosen bandwidth).$}
+\item{bd}{An object of class vector. If use auto bandwidth selection, the structure of the vector must be: d=c(the maximum bandwidth, the minimum bandwidth, the fold of cross-validation, the number of bandwidth divided). If use fixed bandwidth, bd=c(the chosen bandwidth).}
 
 \item{omit}{An object of class integer indicating the method used to do estimation for synchronous covariates. If use plm method, omit=1; if use centering method, omit=2; if use additional covariates information, omit=3.}
 
@@ -25,7 +25,7 @@ a list with the following elements:
 \item{se}{The estimation of standard error for the estimated parameters.}
 }
 \description{
-This package provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates.
+This function provide regression analysis of mixed sparse synchronous and asynchronous longitudinal covariates.
 }
 \examples{
 
